@@ -1,42 +1,26 @@
-Fire Crawler (github.com/firecrawl/firecrawl)
-What Firecrawl does
+# Fire Crawler (github.com/firecrawl/firecrawl)
 
-Crawls entire sites (controls for depth, subdomains, path include/exclude) and handles JS/rate limits. ✅
+## What Firecrawl does
+- Crawls entire sites (controls for depth, subdomains, path include/exclude) and handles JS/rate limits. ✅
+- Scrapes to multiple formats (Markdown, HTML, raw HTML, links, screenshots, summaries, JSON), with onlyMainContent and tag include/exclude options. ✅
+- Structured extraction via LLMs using a JSON schema or prompt (/extract or JSON format in /scrape). ✅
+- Search + scrape endpoint to fetch full content for query results.
+- Async job model & batching for scale.
 
-Scrapes to multiple formats (Markdown, HTML, raw HTML, links, screenshots, summaries, JSON), with onlyMainContent and tag include/exclude options. ✅
+## Where Firecrawl is better
+- Faster to "LLM-ready" content (clean Markdown/JSON out of the box, including PDFs).
+- Schema-based data extraction built in (no separate post-processing step needed to shape JSON).
+- Flexible crawl controls (subdomains, external links, depth, includePaths) for precise scope without writing spider code.
+- One API for crawl, scrape, and search, reducing glue code and custom infra.
 
-Structured extraction via LLMs using a JSON schema or prompt (/extract or JSON format in /scrape). ✅
-
-Search + scrape endpoint to fetch full content for query results. 
-
-Async job model & batching for scale. 
-
-Where Firecrawl is better
-
-Faster to “LLM-ready” content (clean Markdown/JSON out of the box, including PDFs).
-
-Schema-based data extraction built in (no separate post-processing step needed to shape JSON).
-
-Flexible crawl controls (subdomains, external links, depth, includePaths) for precise scope without writing spider code.
-
-One API for crawl, scrape, and search, reducing glue code and custom infra.
-
-Missing Features (vs. this repo)
-
-No dataset-level URL or exact-text de-duplication (you’ll still need filter.py).
-
-No enforced single-language keep (e.g., “Spanish only” filter).
-
-No repo-specific output layout (data/<domain>_<ts>/*) or crawl_summary.json stats file.
-
-Limited normalization/cleaning pipeline: no Unicode/whitespace fixes, entity/date standardization, or low-content pruning out of the box.
-
-No near-duplicate (simhash/fuzzy) detection across pages.
-
-No automatic site-specific boilerplate heuristics beyond basic main-content options.
-
-No built-in Markdown→schema postprocessing tailored to your dataset (LLM extraction exists, but you’ll still curate schemas/validators).
-
+## Missing Features (vs. this repo)
+- No dataset-level URL or exact-text de-duplication (you'll still need filter.py).
+- No enforced single-language keep (e.g., "Spanish only" filter).
+- No repo-specific output layout (data/<domain>_<ts>/*) or crawl_summary.json stats file.
+- Limited normalization/cleaning pipeline: no Unicode/whitespace fixes, entity/date standardization, or low-content pruning out of the box.
+- No near-duplicate (simhash/fuzzy) detection across pages.
+- No automatic site-specific boilerplate heuristics beyond basic main-content options.
+- No built-in Markdown→schema postprocessing tailored to your dataset (LLM extraction exists, but you'll still curate schemas/validators).
 
 
 # Site Crawler
