@@ -1,9 +1,9 @@
 # Fire Crawler (github.com/firecrawl/firecrawl)
 
 ## What Firecrawl does
-- Crawls entire sites (controls for depth, subdomains, path include/exclude) and handles JS/rate limits. ✅
-- Scrapes to multiple formats (Markdown, HTML, raw HTML, links, screenshots, summaries, JSON), with onlyMainContent and tag include/exclude options. ✅
-- Structured extraction via LLMs using a JSON schema or prompt (/extract or JSON format in /scrape). ✅
+- Crawls entire sites (controls for depth, subdomains, path include/exclude) and handles JS/rate limits. 
+- Scrapes to multiple formats (Markdown, HTML, raw HTML, links, screenshots, summaries, JSON), with onlyMainContent and tag include/exclude options. 
+- Structured extraction via LLMs using a JSON schema or prompt (/extract or JSON format in /scrape). 
 - Search + scrape endpoint to fetch full content for query results.
 - Async job model & batching for scale.
 
